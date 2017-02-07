@@ -3,8 +3,8 @@ class Classroom {
 		this.students = [];
 		this.parents = [];
 	}
-	addStudent (addStudent) {
-		this.students.push(addStudent);
+	addStudent (...addStudent) {
+		this.students.push(...addStudent);
 	}
 	removeStudent () {
 		this.students.pop();
@@ -16,30 +16,37 @@ class Classroom {
 }
 
 
-class People {
-	constructor(name, surname, gender){
-		this._nationality = "ukrainian";
-		// nationality (это будет приватное поле, его изменять нельзя будет из вне)
-		this.name = name;
-		this.surname = surname;
-		if(gender == 'man' || gender == 'woman'){
-			this.gender = gender;
-		}
-	}
+let People = (function(){
+	let privateProps = new WeakMap();
 
-	changeNationality(nationality) {
-		this._nationality = nationality;
-	}
+	class People {
+		constructor(name, surname, gender){
+			privateProps.set(this, {nationality: "ukrainian"});
+			// nationality (это будет приватное поле, его изменять нельзя будет из вне)
+			this.name = name;
+			this.surname = surname;
+			if(gender == 'man' || gender == 'woman'){
+				this.gender = gender;
+			}
+		}
 
-	sayMyName() {
-		if(this.gender == 'man'){
-			console.log(`My name Mr. ${this.name} ${this.surname} and I ${this._nationality}`);
+		changeNationality(nationality) {
+			this.nationality = nationality;
+			privateProps.set(this, {nationality: this.nationality});
 		}
-		if (this.gender == 'woman'){
-			console.log(`My name Mrs. ${this.name} ${this.surname} and I ${this._nationality}`);
+
+		sayMyName() {
+			if(this.gender == 'man'){
+				console.log(`My name Mr. ${this.name} ${this.surname} and I'm ${privateProps.get(this).nationality}`);
+			}
+			if (this.gender == 'woman'){
+				console.log(`My name Mrs. ${this.name} ${this.surname} and I'm ${privateProps.get(this).nationality}`);
+			}
 		}
 	}
-}
+	return People;
+})();
+
 
 
 class Student extends People {
@@ -48,8 +55,8 @@ class Student extends People {
 		this.subject = [];
 	}
 
-	addSubject (subject) {
-		this.subject.push(subject);
+	addSubject (...subject) {
+		this.subject.push(...subject);
 	}
 	removeSubject () {
 		this.subject.pop();
@@ -82,14 +89,25 @@ class Parent extends People {
 
 
 let student = new Student('Igor', 'Samborskiy', 'man');
+let student2 = new Student('Alex', 'Vetrov', 'man');
+let student3 = new Student('Alla', 'Parshina', 'woman');
+
+
 student.sayMyName();
-student.addSubject('Mathematics');
-console.log(student.subject[0]);
+student.addSubject('Mathematics', 'Geometry');
+student.changeNationality('american');
+
+student.sayMyName();
+student3.sayMyName();
+
+console.log(student.subject);
 
 let parent = new Parent('Nik', 'Vetrov', 'man', 5);
 parent.sayMyName();
+parent.changeNationality('american');
+parent.sayMyName();
 
 let classroom = new Classroom();
-classroom.addStudent(student);
-console.log(classroom.students[0]);
+classroom.addStudent(student, student2, student3);
+console.log(classroom.students);
 console.dir(parent);
