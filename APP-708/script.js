@@ -88,26 +88,26 @@ class Parent extends People {
 }
 
 
-let student = new Student('Igor', 'Samborskiy', 'man');
-let student2 = new Student('Alex', 'Vetrov', 'man');
-let student3 = new Student('Alla', 'Parshina', 'woman');
+// let student = new Student('Igor', 'Samborskiy', 'man');
+// let student2 = new Student('Alex', 'Vetrov', 'man');
+// let student3 = new Student('Alla', 'Parshina', 'woman');
 
 
-student.sayMyName();
-student.addSubject('Mathematics', 'Geometry');
-student.changeNationality('american');
+// student.sayMyName();
+// student.addSubject('Mathematics', 'Geometry');
+// student.changeNationality('american');
 
-student.sayMyName();
-student3.sayMyName();
+// student.sayMyName();
+// student3.sayMyName();
 
-console.log(student.subject);
+// console.log(student.subject);
 
-let parent = new Parent('Nik', 'Vetrov', 'man', 5);
-parent.sayMyName();
-parent.changeNationality('american');
-parent.sayMyName();
+// let parent = new Parent('Nik', 'Vetrov', 'man', 5);
+// parent.sayMyName();
+// parent.changeNationality('american');
+// parent.sayMyName();
 
-let classroom = new Classroom();
-classroom.addStudent(student, student2, student3);
-console.log(classroom.students);
-console.dir(parent);
+// let classroom = new Classroom();
+// classroom.addStudent(student, student2, student3);
+// console.log(classroom.students);
+// console.dir(parent);
