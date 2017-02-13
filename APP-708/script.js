@@ -9,10 +9,6 @@ class Classroom {
 	removeStudent () {
 		this.students.pop();
 	}
-// addStudent
-// removeStudent
-// есть поле students(массив из студентов)
-// есть поле parents (массив из родителей студентов)
 }
 
 
@@ -22,7 +18,6 @@ let People = (function(){
 	class People {
 		constructor(name, surname, gender){
 			privateProps.set(this, {nationality: "ukrainian"});
-			// nationality (это будет приватное поле, его изменять нельзя будет из вне)
 			this.name = name;
 			this.surname = surname;
 			if(gender == 'man' || gender == 'woman'){
@@ -30,9 +25,13 @@ let People = (function(){
 			}
 		}
 
-		changeNationality(nationality) {
-			this.nationality = nationality;
-			privateProps.set(this, {nationality: this.nationality});
+
+		get nationality(){
+			console.log(privateProps.get(this).nationality);
+		}
+
+		set nationality (nationality) {
+			privateProps.set(this, {nationality: nationality});
 		}
 
 		sayMyName() {
@@ -61,12 +60,6 @@ class Student extends People {
 	removeSubject () {
 		this.subject.pop();
 	}
-	// у класса student  есть поля от родителя и еще
-	// subjects (список предметов на которые он ходит, типа математика, физика и тд)
-	// есть методы
-	// addSubject
-	// и
-	// removeSubject
 }
 
 
@@ -81,33 +74,31 @@ class Parent extends People {
 			console.log('Cтрогость родителя от 0 до 10');
 		}
 	}
-
-//     parent наследуется от people
-// у класса parent есть поля от родителя и еще
-// rigor (строгость от 1 до 10 баллов)
 }
 
+let student = new Student('Igor', 'Samborskiy', 'man');
+let student2 = new Student('Alex', 'Vetrov', 'man');
+let student3 = new Student('Alla', 'Parshina', 'woman');
 
-// let student = new Student('Igor', 'Samborskiy', 'man');
-// let student2 = new Student('Alex', 'Vetrov', 'man');
-// let student3 = new Student('Alla', 'Parshina', 'woman');
 
+student.sayMyName();
+student.addSubject('Mathematics', 'Geometry');
+student.nationality = 'mexican';
 
-// student.sayMyName();
-// student.addSubject('Mathematics', 'Geometry');
-// student.changeNationality('american');
+student.sayMyName();
+student3.sayMyName();
+student3.nationality;
+student3.nationality = 'american';
+student3.nationality;
 
-// student.sayMyName();
-// student3.sayMyName();
+console.log(student.subject);
 
-// console.log(student.subject);
+let parent = new Parent('Nik', 'Vetrov', 'man', 5);
+parent.sayMyName();
+parent.nationality = 'american';
+parent.sayMyName();
 
-// let parent = new Parent('Nik', 'Vetrov', 'man', 5);
-// parent.sayMyName();
-// parent.changeNationality('american');
-// parent.sayMyName();
-
-// let classroom = new Classroom();
-// classroom.addStudent(student, student2, student3);
-// console.log(classroom.students);
-// console.dir(parent);
+let classroom = new Classroom();
+classroom.addStudent(student, student2, student3);
+console.log(classroom.students);
+console.dir(parent);
