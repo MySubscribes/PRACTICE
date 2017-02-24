@@ -1,14 +1,9 @@
-'<div id="field" class="container">
+<div id="field" class="container">
     <header id="todo" class="todo">
         <h1>{{title}}</h1>
-        <!--&lt;!&ndash;<div  class="archive">&ndash;&gt;-->
-            <!--&lt;!&ndash;<span id="counter">0</span> of&ndash;&gt;-->
-            <!--&lt;!&ndash;<span id="counter-all">0</span>&ndash;&gt;-->
-            <!--&lt;!&ndash;remaining <button id="archive" class="btn arch">archive</button>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
     </header>
     <main class="input-group">
-        <todo></todo>
-        <todolist (add)="addBtn($event)"></todolist>
+        <todo-list></todo-list>
+        <todo-form></todo-form>
     </main>
 </div>

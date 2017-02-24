@@ -1,11 +1,17 @@
 
+
 export const todos = [
     {
-        title:'Ghbdtn',
+        title: '1111',
+        completed: false
+    }
+    ,
+    {
+        title: 'gjtrf',
         completed: false
     },
     {
-        title:'Ghbd',
+        title: 'Allo',
         completed: false
     }
 ]

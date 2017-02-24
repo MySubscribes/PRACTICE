@@ -1,8 +1,0 @@
-<div id="todos">
-    <ul *ngIf="todos.length">
-        <li *ngFor="let todo of todos" [ngClass]="{ 'checked' : todo.completed } ">
-            <input type="checkbox" (click)="toggle(todo)">{{todo.title}}
-            <button class="dell btn" (click)="deleteBtn(todo)">Delete</button>
-        </li>
-    </ul>
-</div>

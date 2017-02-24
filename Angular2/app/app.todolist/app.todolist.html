@@ -1,4 +1,0 @@
-<form class="task-add" (ngSubmit)="addBtn(); todoForm.reset()" #todoForm="ngForm">
-    <input type="text" name="title" [(ngModel)]="newTodoTitle" class="form-control" placeholder="add new todo" autofocus required>
-    <button class="btn add btn-default" type="submit" [disabled]="todoForm.form.invalid">Add</button>
-</form>

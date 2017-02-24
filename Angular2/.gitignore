@@ -43,7 +43,6 @@ jspm_packages
 app/**/*.js
 app/**/*.js.map
 
-/node_modules
 /old
-
-.idea
+/node_modules
+/.idea

@@ -1,0 +1,5 @@
+<div id="todos">
+    <ul class="addTask" *ngIf="todos.length">
+        <todo-item  *ngFor="let todo of todos" [todo] = "todo" (delete)="delete($event)" (toggle)="toggle($event)"></todo-item>
+    </ul>
+</div>
