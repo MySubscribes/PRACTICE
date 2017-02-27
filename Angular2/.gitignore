@@ -45,4 +45,3 @@ app/**/*.js.map
 
 /old
 /node_modules
-/.idea

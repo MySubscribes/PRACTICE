@@ -3,7 +3,6 @@ import { Component, OnInit} from '@angular/core';
 import { Todo } from '../shared/todo';
 import { TodoService } from '../shared/todo.service';
 
-
 @Component ({
     moduleId: module.id,
     selector: 'todo-list',
@@ -21,8 +20,8 @@ export class TodoListComponent implements OnInit {
     ngOnInit(){
         this.todos = this.todoService.getTodos();
     }
-    delete(todo: Todo){
-        this.todoService.deleteTodo(todo);
+    delete(event: Todo){
+        this.todoService.deleteTodo(event);
     }
 
     toggle(todo: Todo){

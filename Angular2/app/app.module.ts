@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { TodoFormComponent } from './app.todo-form/app.todo-form';
-import { TodoListComponent } from './app.todo-list/app.todo-list';
+import { TodoFormComponent } from './todo-form/app.todo-form';
+import { TodoListComponent } from './todo-list/app.todo-list';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoService } from './shared/todo.service';
+import { TodoCounterComponent } from './todo-counter/todo-counter.component';
+
+
 
 
 @NgModule({
@@ -15,7 +18,8 @@ import { TodoService } from './shared/todo.service';
         AppComponent,
         TodoFormComponent,
         TodoListComponent,
-        TodoItemComponent
+        TodoItemComponent,
+        TodoCounterComponent
     ],
     providers: [TodoService],
     bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 <li [ngClass]="{ 'checked' : todo.completed } ">
     <input type="checkbox" (click)="onToggle()">
-    <span>{{todo.title}}</span>
-    <button class="dell btn" (click)="onDelete()" >Delete</button>
+    <span>{{todo.title}} {{dateTime}}</span>
+    <button class="dell btn" (click)="onDelete()">Delete</button>
 </li>
