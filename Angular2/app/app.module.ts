@@ -10,8 +10,6 @@ import { TodoService } from './shared/todo.service';
 import { TodoCounterComponent } from './todo-counter/todo-counter.component';
 
 
-
-
 @NgModule({
     imports: [BrowserModule, FormsModule],
     declarations: [

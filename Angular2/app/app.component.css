@@ -1,96 +1,22 @@
+#field {
+	width: 600px;
+	height: auto;
+	margin: 15px auto;
+	margin-top: 100px;
+	background: #616d84;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	color: white; }
+#field h1 {
+	color: white;
+	padding-top: 20px; }
+
 
 .todo {
 	text-align: center;
 	width: 100%; }
-.todo .archive {
-	margin: 0; }
-
-ul {
-	margin: 0;
-	padding: 0;
-	padding-left: 10px; }
-ul li {
-
-	max-width: 500px;
-	height: auto;
-	margin: 5px 0;
-	list-style-type: none;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	height: 31px;
-	font-size: 16px;
-	line-height: 31px; }
-ul input[type="radio"],
-ul input[type="checkbox"] {
-	margin: 0 15px 0;
-	line-height: normal;
-	vertical-align: middle;
-	overflow: hidden;
-	text-overflow: ellipsis; }
-ul li:hover {
-	background: #ddd;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 10px 10px 90px -20px rgba(0, 0, 0, 0.48);
-	box-shadow: 10px 10px 90px -20px rgba(0, 0, 0, 0.48);
-	-webkit-transition: 1s;
-	transition: 1s; }
 
 .input-group {
 	width: 500px;
-	margin: 0 auto; }
-.input-group .task-add {
-	width: 300px;
-	padding-top: 10px;
-	margin: 0 auto; }
-.input-group .task-add .form-control {
-	width: 245px;
-	margin-bottom: 20px;
-	height: 33px; }
-.input-group .btn {
-	min-width: 55px; }
-.input-group .btn-default {
-	color: white;
-	background-color: #0074cc;
-	border-color: #0045aa;
-	background-image: none;
-	float: right !important; }
-.input-group .add:hover {
-	color: white;
-	background-color: #33cc66;
-	border-color: #33cc66;
-	-webkit-transition: 0.5s;
-	transition: 0.5s; }
-
-.dell {
-	color: white;
-	background-color: #0074cc;
-	border-color: #0045aa;
-	background-image: none;
-	float: right !important;
-	padding: 5px 6px; }
-
-.dell:hover {
-	float: right;
-	outline-style: none;
-	color: white;
-	background-color: #cc0033;
-	border-color: #cc0033;
-	-webkit-transition: 0.5s;
-	transition: 0.5s; }
-
-.checked {
-	text-decoration: line-through;
-	color: grey;
-	background: #66cc66; }
-
-.arch {
-	color: white;
-	background-color: #33cc66;
-	border-color: #33cc66;
-	height: 20px;
-	line-height: 14px;
-	margin: 2px;
-	padding: 3px;
-	-webkit-transition: 0.5s;
-	transition: 0.5s; }
+	margin: 0 auto;
+}

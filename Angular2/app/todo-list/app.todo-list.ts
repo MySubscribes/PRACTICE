@@ -18,10 +18,12 @@ export class TodoListComponent implements OnInit {
     }
 
     ngOnInit(){
-        this.todos = this.todoService.getTodos();
+        this.todos = this.todoService.todos;
     }
+
     delete(event: Todo){
         this.todoService.deleteTodo(event);
+        setTimeout(this.todos = this.todoService.todos, 0);
     }
 
     toggle(todo: Todo){

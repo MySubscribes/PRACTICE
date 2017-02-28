@@ -1,0 +1,49 @@
+li {
+	color: white;
+	max-width: 500px;
+	height: auto;
+	margin: 5px 0;
+	list-style-type: none;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	height: 31px;
+	font-size: 16px;
+	line-height: 31px; }
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 0 15px 0;
+	line-height: normal;
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow: ellipsis; }
+li:hover {
+	background: #ddd;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 10px 90px -20px rgba(0, 0, 0, 0.48);
+	box-shadow: 10px 10px 90px -20px rgba(0, 0, 0, 0.48);
+	-webkit-transition: 1s;
+	transition: 1s; }
+
+.dell {
+	color: white;
+	background-color: #0074cc;
+	border-color: #0045aa;
+	background-image: none;
+	float: right !important;
+	padding: 5px 6px; }
+
+.dell:hover {
+	float: right;
+	outline-style: none;
+	color: white;
+	background-color: #cc0033;
+	border-color: #cc0033;
+	-webkit-transition: 0.5s;
+	transition: 0.5s; }
+
+.checked {
+	text-decoration: line-through;
+	color: grey;
+	background: #66cc66; }
+

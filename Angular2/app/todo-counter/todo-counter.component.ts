@@ -8,20 +8,18 @@ import { TodoService } from '../shared/todo.service';
     styleUrls:['todo-counter.component.css']
 })
 
-export class TodoCounterComponent implements OnInit{
-    counter: number = 0;
-    todoCounter: number = 0;
+export class TodoCounterComponent implements OnInit {
+    allTodos: number = 0;
+    doneTodo: number = 0;
 
     constructor (private todoService: TodoService){
     }
 
-    ngOnInit(){
-        this.todoService.eventEm.subscribe((data:number)=> {
-           this.counter = data;
-        });
+     ngOnInit(){
 
-        this.todoService.counterTodoEm.subscribe((counter:number)=> {
-            this.todoCounter = counter;
+        this.todoService.eventEm.subscribe((counter:any)=> {
+            this.doneTodo = counter.doneCounter;
+            this.allTodos = counter.allCount;
         })
     }
 }

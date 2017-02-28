@@ -3,15 +3,18 @@
 export const todos = [
     {
         title: '1111',
-        completed: false
+        completed: false,
+        id: '0'
     }
     ,
     {
         title: 'gjtrf',
-        completed: false
+        completed: false,
+        id: '1'
     },
     {
         title: 'Allo',
-        completed: false
+        completed: false,
+        id: '2'
     }
 ]

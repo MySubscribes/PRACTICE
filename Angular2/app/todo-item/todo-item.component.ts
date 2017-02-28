@@ -1,6 +1,7 @@
 
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { Todo } from '../shared/todo' /*Получаю доступ к классу*/
+import { Todo } from '../shared/todo';
+import { TodoService } from '../shared/todo.service';
 
 
 @Component ({
@@ -11,18 +12,19 @@ import { Todo } from '../shared/todo' /*Получаю доступ к клас�
 })
 
 export class TodoItemComponent {
-
-
+    id: any = Date.now();
     dateTime = new Date().toLocaleTimeString();
     @Input() todo: Todo;
     @Output() delete = new EventEmitter();
     @Output() toggle = new EventEmitter();
 
+    constructor(private todoService: TodoService){}
+
     onDelete(){
-        this.delete.emit(this.todo);
+        this.todoService.deleteTodo(this.todo);
     }
 
     onToggle(){
-        this.toggle.emit(this.todo);
+        this.todoService.toggleTodo(this.todo);
     }
 }
