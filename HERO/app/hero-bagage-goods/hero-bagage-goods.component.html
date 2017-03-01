@@ -1,4 +1,4 @@
 <div class="goods-bag"  >
-    <thing *ngFor="let item of goods" [oneThing]="item" (click)="addNewThing(item)"></thing>
+    <thing *ngFor="let item of goods" [oneThing]="item" (click)="onHeroUpdated(item)" (click)="addNewThing(item)"></thing>
 </div>
 

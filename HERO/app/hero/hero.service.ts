@@ -11,6 +11,8 @@ export class HeroService {
         this._hero = value;
     }
     private _hero: Hero = new Hero();
+
+
 }
 
 

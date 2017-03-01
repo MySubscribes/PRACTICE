@@ -1,6 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
-// import {GoodsService} from  '../shared/goods.service';
-// import {Goods} from "../shared/goodsClass";
+import {Component, Input} from '@angular/core';
 
 
 @Component ({
@@ -11,9 +9,5 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 
 export class ThingComponent {
-    // goods: Goods[];
     @Input() oneThing:any;
-
-    // constructor(private goodsService: GoodsService ){}
-
 }

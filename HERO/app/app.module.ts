@@ -23,7 +23,7 @@ import {HeroService} from "./hero/hero.service";
         HeroBagageComponent,
         ThingComponent
     ],
-    providers: [HeroService, GoodsService ],
+    providers: [HeroService, GoodsService],
     bootstrap: [AppComponent]
 })
 

@@ -8,14 +8,22 @@ const baseSkills =  {
 };
 
 export class Hero {
+
+    // addNewGoods(target:any){
+    //     if(target.type === 'helmet')
+    //     console.log('муve', target.stats.power)
+    // }
+
+
+
     get sword(): any {
         return this._sword;
     }
 
     set sword(value: any) {
-        if (this._sword !== undefined) {
-            // minusSkills()
-        }
+        // if (this._sword !== undefined) {
+        //     // minusSkills()
+        // }
         this._sword = value;
         // plusSkills()
     }
@@ -38,18 +46,17 @@ export class Hero {
     set skills(value: any) {
         this._skills = value;
     }
-
-    private setSkills(skills:any) {
-        /**
-         * @todo Считаем скилы с новыми значениями
-         */
-    }
+    //
+    // private setSkills(skills:any) {
+    //     /**
+    //      * @todo Считаем скилы с новыми значениями
+    //      */
+    // }
 
     private _skills: any;
     private _helmet: any;
     private _sword: any;
     constructor( public name: string = 'Roma'){
         this._skills = baseSkills;
-
     }
 }
