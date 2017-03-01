@@ -1,0 +1,16 @@
+.backpack {
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 188px;
+	background:#C41E3A;
+	border-radius: 5px 5px 5px 5px;
+}
+.backpack h2{
+	display: block;
+	width: 100%;
+	margin: 10px 0 10px 0;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}

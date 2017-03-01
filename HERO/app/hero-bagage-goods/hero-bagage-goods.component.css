@@ -1,0 +1,30 @@
+
+.goods-bag{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: inline-flex;
+	justify-content:flex-start;
+	align-items:center;
+	flex-wrap: wrap;
+}
+
+.goods-bag div{
+	padding: 1px;
+	margin-top: 4px;
+	margin-left: 4px;
+	border-color: white;
+	-webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+	-moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+	-ms-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+	-o-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+	box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(70, 100, 200, 0.7);
+}
+.goods-bag div:hover{
+	-webkit-box-shadow: 0 1px 4px -1px white inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+	-moz-box-shadow: 0 1px 4px -1px white inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+	-ms-box-shadow: 0 1px 4px -1px white inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+	-o-box-shadow:  0 1px 4px -1px white inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(120, 200, 70, 0.7);
+	box-shadow: 0 1px 4px -1px white inset, 0 1px rgba(255, 255, 255, 0.6), 0 0 11px rgba(10, 10, 70, 0.7);
+}
