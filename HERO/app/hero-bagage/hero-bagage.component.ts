@@ -9,5 +9,5 @@ import { Component} from '@angular/core';
 })
 
 export class HeroBagageComponent {
-    title: string = '';
+    // title: string = '';
 }

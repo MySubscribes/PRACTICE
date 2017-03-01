@@ -4,14 +4,14 @@
 	margin: 0 auto;
 	margin-top: 50px;
 	padding-top: 25px;
-	background: grey;
+	background: white;
 	border-radius: 5px 5px 5px 5px;
 	border-color: #059;
 	-webkit-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(70, 100, 200, 0.7);
 	-moz-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(70, 100, 200, 0.7);
 	-ms-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(70, 100, 200, 0.7);
 	-o-box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(70, 100, 200, 0.7);
-	box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(0, 128, 255, 0.6);
+	box-shadow: 0 1px 4px -1px #a8a8a8 inset, 0 0 rgba(255, 255, 255, 0.6), 0 0 50px rgba(0,8, 0, 0.6);
 }
 
 .title{
