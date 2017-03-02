@@ -2,6 +2,7 @@ export const goods = [
     {
         type: 'armor',
         view: '../img/armor.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -14,6 +15,7 @@ export const goods = [
     {
         type: 'belt',
         view: '../img/belt.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -26,6 +28,7 @@ export const goods = [
     {
         type: 'boots',
         view: '../img/boots.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -38,6 +41,7 @@ export const goods = [
     {
         type: 'bracers',
         view: '../img/bracers.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -50,6 +54,7 @@ export const goods = [
     {
         type: 'helmet',
         view: '../img/helmet.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -62,6 +67,7 @@ export const goods = [
     {
         type: 'shield',
         view: '../img/shield.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -74,6 +80,7 @@ export const goods = [
     {
         type: 'sword',
         view: '../img/sword.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -85,7 +92,8 @@ export const goods = [
 
     {
         type: 'armor',
-        view: '../img/armor.png',
+        view: '../img/armor2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -97,7 +105,8 @@ export const goods = [
 
     {
         type: 'belt',
-        view: '../img/belt.png',
+        view: '../img/belt2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -109,7 +118,8 @@ export const goods = [
 
     {
         type: 'boots',
-        view: '../img/boots.png',
+        view: '../img/boots2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -121,7 +131,8 @@ export const goods = [
 
     {
         type: 'bracers',
-        view: '../img/bracers.png',
+        view: '../img/bracers2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -133,7 +144,8 @@ export const goods = [
 
     {
         type: 'helmet',
-        view: '../img/helmet.png',
+        view: '../img/helmet2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -145,7 +157,8 @@ export const goods = [
 
     {
         type: 'shield',
-        view: '../img/shield.png',
+        view: '../img/shield2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -157,7 +170,8 @@ export const goods = [
 
     {
         type: 'sword',
-        view: '../img/sword.png',
+        view: '../img/sword2.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -169,7 +183,8 @@ export const goods = [
 
     {
         type: 'armor',
-        view: '../img/armor.png',
+        view: '../img/armor3.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -181,7 +196,8 @@ export const goods = [
 
     {
         type: 'belt',
-        view: '../img/belt.png',
+        view: '../img/belt3.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -193,7 +209,8 @@ export const goods = [
 
     {
         type: 'boots',
-        view: '../img/boots.png',
+        view: '../img/boots3.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -204,8 +221,9 @@ export const goods = [
     },
 
     {
-        type: 'armor',
-        view: '../img/armor.png',
+        type: 'sword',
+        view: '../img/sword3.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -217,7 +235,8 @@ export const goods = [
 
     {
         type: 'belt',
-        view: '../img/belt.png',
+        view: '../img/belt4.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -228,8 +247,9 @@ export const goods = [
     },
 
     {
-        type: 'boots',
-        view: '../img/boots.png',
+        type: 'shield',
+        view: '../img/shield4.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -241,7 +261,8 @@ export const goods = [
 
     {
         type: 'bracers',
-        view: '../img/bracers.png',
+        view: '../img/bracers4.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -253,7 +274,8 @@ export const goods = [
 
     {
         type: 'helmet',
-        view: '../img/helmet.png',
+        view: '../img/helmet4.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -265,7 +287,8 @@ export const goods = [
 
     {
         type: 'shield',
-        view: '../img/shield.png',
+        view: '../img/shield3.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,
@@ -277,7 +300,8 @@ export const goods = [
 
     {
         type: 'sword',
-        view: '../img/sword.png',
+        view: '../img/sword4.png',
+        wear: false,
         stats: {
             power: 10,
             agility: 10,

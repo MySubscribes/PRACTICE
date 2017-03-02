@@ -13,7 +13,7 @@ import {HeroService} from "../hero/hero.service";
 
 export class HeroBagageGoodsComponent implements OnInit {
     goods: Goods[];
-    // @Output() heroUpdated = new EventEmitter();
+
 
     constructor(private goodsService: GoodsService,
                 private heroService: HeroService) {
@@ -24,12 +24,15 @@ export class HeroBagageGoodsComponent implements OnInit {
         this.goods = this.goodsService.goods;
     }
 
-    addNewThing(thing: any) {
-        this.heroService.hero[thing.type] = thing;
-    }
+    // addNewThing(thing: any) {
+    //     // this.heroService.hero[thing.type] = thing;
+    // }
 
     onHeroUpdated(things: any) {
-        // this.heroService.hero.addNewGoods(things)
+        this.heroService.undress(things);
+        // things.wear = !things.wear;
+        this.heroService.addNewGoods(things);
+
     }
 
 }

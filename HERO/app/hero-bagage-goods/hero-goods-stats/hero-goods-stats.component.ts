@@ -1,7 +1,8 @@
 
-import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
-import {GoodsService} from "../../shared/goods.service";
+import {Component, OnInit} from '@angular/core';
+// import {GoodsService} from "../../shared/goods.service";
 import {Goods} from "../../shared/goodsClass";
+import {HeroService} from "../../hero/hero.service";
 
 
 
@@ -13,20 +14,28 @@ import {Goods} from "../../shared/goodsClass";
 })
 
 export class HeroGoodsStatsComponent implements OnInit{
-    goods: Goods[];
-    // @Input() oneThing:any;
-    name: any;
-    // stats: any;
-    // power: number;
+    // goods: Goods[];
+    stats: any;
+    power: number;
+
     // agility: number;
     // intuition: number;
     // health:number;
     // intellect: number;
-    constructor(private goodsService: GoodsService){}
+    // constructor(private goodsService: GoodsService){}
+    constructor(private heroService: HeroService) {
+    }
     ngOnInit(){
-       // this.goods = this.goodsService.getStats();
-       // this.name = this.goods[0].name;
-       // console.log(this.name)
+
+            this.heroService.eventEm.subscribe((things: any) => {
+                console.log(things);
+                // this.belt = goods.belt;
+                // this.boots = goods.boots;
+                // this.bracers = goods.bracers;
+                // this.helmet = goods.helmet;
+                // this.shield = goods.shield;
+                // this.sword = goods.sword;
+            });
     }
 
 }
