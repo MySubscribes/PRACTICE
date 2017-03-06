@@ -1,60 +1,35 @@
-import {Hero} from "./hero";
 import {Injectable, EventEmitter} from "@angular/core";
 
 @Injectable()
 export class HeroService {
-    armor: any;
-    belt: any;
-    boots:any;
-    bracers:any;
-    helmet:any;
-    shield:any;
-    sword:any;
 
-    hero: Hero = new Hero();
+    armor: any = null;
+    belt: any = null;
+    boots:any = null;
+    bracers:any = null;
+    helmet:any = null;
+    shield:any = null;
+    sword:any = null;
+
     eventEm = new EventEmitter();
-
-    undress(type: string){
-        if(type === 'armor'){
-
+    undress(type: any){
+        if (this[type]){
+            this[type].wear = false;
+            this[type] = null;
         }
-        console.log(this.wear);
-
+    }
+    heroUndress(selectThing: any){
+        this[selectThing.type] = null;
+        this.updateItem();
     }
 
-    addNewGoods(target:any){
-        if(target.type == 'armor'){
-            this.armor = target.view;
-            this.updateItem();
-            }
-
-        if(target.type === 'belt'){
-            this.belt = target.view;
+    addNewThing(selectThing:any){
+        if (selectThing.type){
+            this[selectThing.type] = selectThing;
             this.updateItem();
         }
-        if(target.type === 'boots'){
-            this.boots = target.view;
-            this.updateItem();
-        }
-        if(target.type === 'bracers'){
-            this.bracers = target.view;
-            this.updateItem();
-        }
-        if(target.type === 'helmet'){
-            this.helmet = target.view;
-            this.updateItem();
-        }
-        if(target.type === 'shield'){
-            this.shield = target.view;
-            this.updateItem();
-        }
-        if(target.type === 'sword'){
-            this.sword = target.view;
-            this.updateItem();
-        }
-        // else{console.log('не работает')}
+        this[selectThing.type].wear = true;
     }
-
     updateItem(){
         this.eventEm.emit({
             armor: this.armor,
@@ -66,6 +41,7 @@ export class HeroService {
             sword: this.sword,
         });
     }
+
 
     // addNewSkills(){
     //

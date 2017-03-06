@@ -1,25 +1,25 @@
 <div class="knight">
 	<div class="yourName">HERO : {{name}}</div>
 	<div class="goods-left">
-		<div class="btn-warning">
-			<img src="{{helmet ? helmet : '../img/helmet_empty.png'}}" width="80px" height="80px" alt="helmet">
+		<div class="btn-warning" (click)="undressHero(helmet)">
+			<img src="{{helmet ? helmet.view : '../img/Icon-empty.png'}}"  width="80px" height="80px" alt="helmet">
 		</div>
-		<div class="btn-warning">
-			<img src="{{shield ? shield : '../img/shield_empty.png'}}" width="80px" height="80px" alt="shield">
+		<div class="btn-warning" (click)="undressHero(shield)">
+			<img src="{{shield ? shield.view : '../img/Icon-empty.png'}}" width="80px" height="80px" alt="shield">
 		</div>
-		<div class="btn-warning">
-			<img src="{{armor ? armor : '../img/shield_empty.png'}}" width="80px" height="80px" alt="armor">
+		<div class="btn-warning" (click)="undressHero(armor)">
+			<img src="{{armor ? armor.view: '../img/Icon-empty.png'}}" width="80px" height="80px" alt="armor">
 		</div>
-		<div class="btn-warning">
-			<img src="{{boots ? boots : '../img/shield_empty.png'}}" width="80px" height="80px" alt="boots"></div>
+		<div class="btn-warning" (click)="undressHero(boots)">
+			<img src="{{boots ? boots.view : '../img/Icon-empty.png'}}" width="80px" height="80px" alt="boots"></div>
 	</div>
 	<div class="goods-right">
-		<div class="btn-warning">
-			<img src="{{bracers ? bracers : '../img/shield_empty.png'}}" width="80px" height="80px" alt="bracers"></div>
-		<div class="btn-warning">
-			<img src="{{belt ? belt : '../img/shield_empty.png'}}" width="80px" height="80px" alt="belt"></div>
-		<div class="btn-warning">
-			<img src="{{sword ? sword : '../img/sword_empty.png'}}" width="80px" height="160px" alt="sword">
+		<div class="btn-warning" (click)="undressHero(bracers)">
+			<img src="{{bracers ? bracers.view : '../img/Icon-empty.png'}}" width="80px" height="80px" alt="bracers"></div>
+		<div class="btn-warning" (click)="undressHero(belt)">
+			<img src="{{belt ? belt.view : '../img/Icon-empty.png'}}" width="80px" height="80px" alt="belt"></div>
+		<div class="btn-warning" (click)="undressHero(sword)">
+			<img src="{{sword ? sword.view : '../img/Icon-empty.png'}}" width="80px" height="160px" alt="sword">
 		</div>
 	</div>
 </div>

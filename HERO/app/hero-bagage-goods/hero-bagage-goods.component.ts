@@ -24,15 +24,10 @@ export class HeroBagageGoodsComponent implements OnInit {
         this.goods = this.goodsService.goods;
     }
 
-    // addNewThing(thing: any) {
-    //     // this.heroService.hero[thing.type] = thing;
-    // }
 
-    onHeroUpdated(things: any) {
-        this.heroService.undress(things);
-        // things.wear = !things.wear;
-        this.heroService.addNewGoods(things);
-
+    selectedThingFromBagage(selectThing: any) {
+        this.heroService.undress(selectThing.type);
+        this.heroService.addNewThing(selectThing);
     }
 
 }

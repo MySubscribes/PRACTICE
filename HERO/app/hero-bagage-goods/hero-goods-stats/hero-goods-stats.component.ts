@@ -17,25 +17,23 @@ export class HeroGoodsStatsComponent implements OnInit{
     // goods: Goods[];
     stats: any;
     power: number;
-
-    // agility: number;
-    // intuition: number;
-    // health:number;
-    // intellect: number;
+    agility: number;
+    intuition: number;
+    health:number;
+    intellect: number;
     // constructor(private goodsService: GoodsService){}
     constructor(private heroService: HeroService) {
     }
     ngOnInit(){
-
-            this.heroService.eventEm.subscribe((things: any) => {
-                console.log(things);
-                // this.belt = goods.belt;
-                // this.boots = goods.boots;
-                // this.bracers = goods.bracers;
-                // this.helmet = goods.helmet;
-                // this.shield = goods.shield;
-                // this.sword = goods.sword;
-            });
+            // this.heroService.eventEm.subscribe((things: any) => {
+            //     console.log(things);
+            //     this.belt = goods.belt;
+            //     this.boots = goods.boots;
+            //     this.bracers = goods.bracers;
+            //     this.helmet = goods.helmet;
+            //     this.shield = goods.shield;
+            //     this.sword = goods.sword;
+            // });
     }
 
 }

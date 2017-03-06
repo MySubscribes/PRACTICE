@@ -9,9 +9,5 @@ import {Component, Input} from '@angular/core';
 })
 
 export class ThingComponent {
-    @Input() oneThing:any;
-    // view:any;
-    // change(){
-    //     this.view = this.oneThing.view;
-    // }
+    @Input() bagageThing:any;
 }
