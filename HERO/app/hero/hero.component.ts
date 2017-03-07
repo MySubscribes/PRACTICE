@@ -13,7 +13,7 @@ import {HeroService} from "./hero.service";
 
 export class HeroComponent implements OnInit {
     // hero: Hero;
-    name: string;
+    name = 'Roma';
     armor: any;
     belt: any;
     boots:any;
@@ -25,10 +25,7 @@ export class HeroComponent implements OnInit {
     constructor(private heroService: HeroService) {}
 
     ngOnInit() {
-        this.name = 'Roma';
-
         this.heroService.eventEm.subscribe((goods: any) => {
-            console.log(goods);
             this.armor = goods.armor;
             this.belt = goods.belt;
             this.boots = goods.boots;
@@ -40,10 +37,9 @@ export class HeroComponent implements OnInit {
     }
     //
     undressHero(thing: any){
-        if(thing) {
+          if(thing) {
             this.heroService.undress(thing.type)
             this.heroService.heroUndress(thing);
-            console.log(thing);
         }
     }
 }

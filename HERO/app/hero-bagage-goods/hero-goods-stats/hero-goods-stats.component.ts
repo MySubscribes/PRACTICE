@@ -1,8 +1,7 @@
 
 import {Component, OnInit} from '@angular/core';
-// import {GoodsService} from "../../shared/goods.service";
-import {Goods} from "../../shared/goodsClass";
 import {HeroService} from "../../hero/hero.service";
+// import {goods} from "../../shared/goods";
 
 
 
@@ -14,27 +13,30 @@ import {HeroService} from "../../hero/hero.service";
 })
 
 export class HeroGoodsStatsComponent implements OnInit{
-    // goods: Goods[];
-    stats: any;
-    power: number;
-    agility: number;
-    intuition: number;
-    health:number;
-    intellect: number;
-    // constructor(private goodsService: GoodsService){}
-    constructor(private heroService: HeroService) {
+
+    prevPower = 0;
+    prevAgility = 0;
+    prevIntuition = 0;
+    prevHealth = 0;
+    prevIntellect = 0;
+
+    power: number =0;
+    agility: number=0;
+    intuition: number=0;
+    health: number=0;
+    intellect: number=0;
+
+
+    constructor( private heroService: HeroService ) {
     }
     ngOnInit(){
-            // this.heroService.eventEm.subscribe((things: any) => {
-            //     console.log(things);
-            //     this.belt = goods.belt;
-            //     this.boots = goods.boots;
-            //     this.bracers = goods.bracers;
-            //     this.helmet = goods.helmet;
-            //     this.shield = goods.shield;
-            //     this.sword = goods.sword;
-            // });
+            this.heroService.eventEmSkills.subscribe((skills: any) => {
+                this.power = skills.power;
+                this.agility = skills.agility;
+                this.intuition = skills.intuition;
+                this.health = skills.health;
+                this.intellect = skills.intellect;
+            });
     }
-
 }
 
