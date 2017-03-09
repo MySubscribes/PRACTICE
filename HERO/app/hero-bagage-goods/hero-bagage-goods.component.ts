@@ -1,4 +1,4 @@
-import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Goods} from "../shared/goodsClass";
 import {GoodsService} from "../shared/goods.service";
 import {HeroService} from "../hero/hero.service";
@@ -26,10 +26,9 @@ export class HeroBagageGoodsComponent implements OnInit {
 
 
     selectedThingFromBagage(selectThing: any) {
-        this.heroService.undress(selectThing.type);
+        this.heroService.heroUndress(selectThing);
         this.heroService.addNewThing(selectThing);
     }
-
 }
 
 

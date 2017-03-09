@@ -1,7 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HeroService} from "./hero.service";
-// import {Hero} from "./hero";
-// import {Hero} from "./hero";
 
 
 @Component({
@@ -12,7 +10,6 @@ import {HeroService} from "./hero.service";
 })
 
 export class HeroComponent implements OnInit {
-    // hero: Hero;
     name = 'Roma';
     armor: any;
     belt: any;
@@ -35,12 +32,9 @@ export class HeroComponent implements OnInit {
             this.sword = goods.sword;
         });
     }
-    //
+
     undressHero(thing: any){
-          if(thing) {
-            this.heroService.undress(thing.type)
-            this.heroService.heroUndress(thing);
-        }
+        this.heroService.heroUndress(thing);
     }
 }
 

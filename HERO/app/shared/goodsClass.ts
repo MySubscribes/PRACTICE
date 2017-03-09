@@ -11,3 +11,10 @@ export class Goods{
                  }){}
 }
 
+export interface Goods1{
+    power: number;
+    agility: number;
+    intuition: number;
+    health: number;
+    intellect: number;
+}

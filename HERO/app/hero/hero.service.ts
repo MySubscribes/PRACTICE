@@ -14,24 +14,24 @@ export class HeroService {
     private things: any = [
         'armor','belt','boots','bracers','helmet','shield','sword'
     ];
+    private stat: any = [
+        'power','agility','intuition','health','intellect'
+    ];
 
-    power = 0;
-    agility = 0;
-    intuition = 0;
-    health = 0;
-    intellect = 0;
+    power: number;
+    agility: number;
+    intuition: number;
+    health: number;
+    intellect: number;
+
 
     eventEm = new EventEmitter();
     eventEmSkills = new EventEmitter();
 
-    undress(type: any){
-        if (this[type]){
-            this[type].wear = false;
-            this[type] = null;
-        }
-    }
-
     heroUndress(selectThing: any){
+        if (this[selectThing.type]){
+            this[selectThing.type].wear = false;
+        }
         this[selectThing.type] = null;
         this.refreshSkills();
         this.updateItem();
@@ -46,6 +46,20 @@ export class HeroService {
         this[selectThing.type].wear = true;
     }
 
+    refreshSkills() {
+
+        for(let stat of this.stat){
+            this[stat] = 0;
+        }
+        for(let think of this.things) {
+            if (this[think]!== null) {
+                for (let stat in this[think].stats) {
+                    this[stat] += this[think].stats[stat];
+                }
+            }
+        }
+        this.updateSkills();
+    }
 
     updateItem(){
         this.eventEm.emit({
@@ -59,22 +73,6 @@ export class HeroService {
         });
     }
 
-    refreshSkills() {
-        this.power = 0;
-        this.agility = 0;
-        this.intuition = 0;
-        this.health = 0;
-        this.intellect = 0;
-            for(let think of this.things) {
-               if (this[think]!== null) {
-                console.log(this[think]);
-                for (let stat in this[think].stats) {
-                    this[stat] += this[think].stats[stat];
-                }
-            }
-        }
-        this.updateSkills();
-    }
 
     updateSkills(){
         this.eventEmSkills.emit({
