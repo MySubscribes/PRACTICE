@@ -8,8 +8,6 @@ export class HeroService {
 
     addNewThing(selectThing: any) {
         this.eventAddThing.emit(selectThing);
-
-        // this.eventUndressThing.emit({state: 'plus', thing: selectThing});
     }
 }
 

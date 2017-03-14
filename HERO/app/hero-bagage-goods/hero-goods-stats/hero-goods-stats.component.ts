@@ -12,7 +12,6 @@ import {HeroService} from "../../hero/hero.service";
 
 export class HeroGoodsStatsComponent implements OnInit{
 
-
     prevPower = 0;
     prevAgility = 0;
     prevIntuition = 0;
@@ -33,15 +32,12 @@ export class HeroGoodsStatsComponent implements OnInit{
 
     ngOnInit() {
         this.heroService.eventUndressThing.subscribe((data: any) => {
-            console.log('data', data);
-            if(data.state === 'plus'){
-                for (let stat in data.thing.stats) {
-                    this[stat] += data.thing.stats[stat];
+            for (let stat of this.stat) {
+                if (Object.keys(data).length == 0) {
+                    this[stat] = 0;
                 }
-            }
-            if (data.state === 'minus'){
-                for (let stat in data.thing.stats) {
-                    this[stat] -= data.thing.stats[stat];
+                else {
+                    this[stat] = data[stat];
                 }
             }
         });

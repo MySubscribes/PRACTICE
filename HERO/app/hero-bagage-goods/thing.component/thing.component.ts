@@ -14,7 +14,6 @@ export class ThingComponent {
     @Input()
     bagageThing:any;
 
-
     constructor(private heroService: HeroService) {}
 
     selectedThing(selectThing: any) {
