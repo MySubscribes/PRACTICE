@@ -2,6 +2,7 @@
 	position: relative;
 	float: right;
 	width: 50%;
+	margin-top: 152px;
 	height: 188px;
 	background:#C41E3A;
 	border-radius: 5px 5px 5px 5px;
@@ -9,7 +10,7 @@
 .backpack h2{
 	display: block;
 	width: 100%;
-	margin: 10px 0 10px 0;
+	margin: 10px 0 5px 0;
 	color: white;
 	font-size: 20px;
 	text-align: center;
@@ -18,3 +19,15 @@
 .goodsimg{
 	opacity: 0.5;
 }
+
+.goods-bag{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: inline-flex;
+	justify-content:flex-start;
+	align-items:center;
+	flex-wrap: wrap;
+}
+

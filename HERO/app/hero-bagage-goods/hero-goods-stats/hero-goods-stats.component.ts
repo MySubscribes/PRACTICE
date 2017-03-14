@@ -1,8 +1,6 @@
 
 import {Component, OnInit} from '@angular/core';
 import {HeroService} from "../../hero/hero.service";
-// import {goods} from "../../shared/goods";
-
 
 
 @Component ({
@@ -14,29 +12,41 @@ import {HeroService} from "../../hero/hero.service";
 
 export class HeroGoodsStatsComponent implements OnInit{
 
+
     prevPower = 0;
     prevAgility = 0;
     prevIntuition = 0;
     prevHealth = 0;
     prevIntellect = 0;
 
-    power: number =0;
-    agility: number=0;
-    intuition: number=0;
-    health: number=0;
-    intellect: number=0;
+    power: number = 0;
+    agility: number = 0;
+    intuition: number = 0;
+    health: number = 0;
+    intellect: number = 0;
 
+    private stat: any = [
+        'power','agility','intuition','health','intellect'
+    ];
 
-    constructor( private heroService: HeroService ) {
-    }
-    ngOnInit(){
-            this.heroService.eventEmSkills.subscribe((skills: any) => {
-                this.power = skills.power;
-                this.agility = skills.agility;
-                this.intuition = skills.intuition;
-                this.health = skills.health;
-                this.intellect = skills.intellect;
-            });
+    constructor( private heroService: HeroService ) {}
+
+    ngOnInit() {
+        this.heroService.eventUndressThing.subscribe((data: any) => {
+            console.log('data', data);
+            if(data.state === 'plus'){
+                for (let stat in data.thing.stats) {
+                    this[stat] += data.thing.stats[stat];
+                }
+            }
+            if (data.state === 'minus'){
+                for (let stat in data.thing.stats) {
+                    this[stat] -= data.thing.stats[stat];
+                }
+            }
+        });
     }
 }
+
+
 

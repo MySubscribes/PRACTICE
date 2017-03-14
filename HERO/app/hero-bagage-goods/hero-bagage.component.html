@@ -1,0 +1,9 @@
+<div class="backpack">
+	<goods-stats></goods-stats>
+	<h2>Рюкзак героя</h2>
+	<div class="goods-bag">
+		<thing *ngFor="let item of goods" [bagageThing]="item"></thing>
+	</div>
+</div>
+
+

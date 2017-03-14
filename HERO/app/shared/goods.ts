@@ -1,5 +1,6 @@
 export const goods = [
     {
+        id: 1,
         type: 'armor',
         view: '../img/armor.png',
         wear: false,
@@ -13,6 +14,7 @@ export const goods = [
     },
 
     {
+        id: 2,
         type: 'belt',
         view: '../img/belt.png',
         wear: false,
@@ -26,6 +28,7 @@ export const goods = [
     },
 
     {
+        id: 3,
         type: 'boots',
         view: '../img/boots.png',
         wear: false,
@@ -39,6 +42,7 @@ export const goods = [
     },
 
     {
+        id: 4,
         type: 'bracers',
         view: '../img/bracers.png',
         wear: false,
@@ -52,6 +56,7 @@ export const goods = [
     },
 
     {
+        id: 5,
         type: 'helmet',
         view: '../img/helmet.png',
         wear: false,
@@ -65,6 +70,7 @@ export const goods = [
     },
 
     {
+        id: 6,
         type: 'shield',
         view: '../img/shield.png',
         wear: false,
@@ -78,6 +84,7 @@ export const goods = [
     },
 
     {
+        id: 7,
         type: 'sword',
         view: '../img/sword.png',
         wear: false,
@@ -91,6 +98,7 @@ export const goods = [
     },
 
     {
+        id: 8,
         type: 'armor',
         view: '../img/armor2.png',
         wear: false,
@@ -104,6 +112,7 @@ export const goods = [
     },
 
     {
+        id: 9,
         type: 'belt',
         view: '../img/belt2.png',
         wear: false,
@@ -117,6 +126,7 @@ export const goods = [
     },
 
     {
+        id: 10,
         type: 'boots',
         view: '../img/boots2.png',
         wear: false,
@@ -130,6 +140,7 @@ export const goods = [
     },
 
     {
+        id: 11,
         type: 'bracers',
         view: '../img/bracers2.png',
         wear: false,
@@ -143,6 +154,7 @@ export const goods = [
     },
 
     {
+        id: 12,
         type: 'helmet',
         view: '../img/helmet2.png',
         wear: false,
@@ -156,6 +168,7 @@ export const goods = [
     },
 
     {
+        id: 13,
         type: 'shield',
         view: '../img/shield2.png',
         wear: false,
@@ -169,6 +182,7 @@ export const goods = [
     },
 
     {
+        id: 14,
         type: 'sword',
         view: '../img/sword2.png',
         wear: false,
@@ -182,6 +196,7 @@ export const goods = [
     },
 
     {
+        id: 15,
         type: 'armor',
         view: '../img/armor3.png',
         wear: false,
@@ -195,6 +210,7 @@ export const goods = [
     },
 
     {
+        id: 16,
         type: 'belt',
         view: '../img/belt3.png',
         wear: false,
@@ -208,6 +224,7 @@ export const goods = [
     },
 
     {
+        id: 17,
         type: 'boots',
         view: '../img/boots3.png',
         wear: false,
@@ -221,6 +238,7 @@ export const goods = [
     },
 
     {
+        id: 18,
         type: 'sword',
         view: '../img/sword3.png',
         wear: false,
@@ -234,6 +252,7 @@ export const goods = [
     },
 
     {
+        id: 19,
         type: 'belt',
         view: '../img/belt4.png',
         wear: false,
@@ -247,6 +266,7 @@ export const goods = [
     },
 
     {
+        id: 20,
         type: 'shield',
         view: '../img/shield4.png',
         wear: false,
@@ -260,6 +280,7 @@ export const goods = [
     },
 
     {
+        id: 21,
         type: 'bracers',
         view: '../img/bracers4.png',
         wear: false,
@@ -273,6 +294,7 @@ export const goods = [
     },
 
     {
+        id: 22,
         type: 'helmet',
         view: '../img/helmet4.png',
         wear: false,
@@ -286,6 +308,7 @@ export const goods = [
     },
 
     {
+        id: 23,
         type: 'shield',
         view: '../img/shield3.png',
         wear: false,
@@ -299,6 +322,7 @@ export const goods = [
     },
 
     {
+        id: 24,
         type: 'sword',
         view: '../img/sword4.png',
         wear: false,

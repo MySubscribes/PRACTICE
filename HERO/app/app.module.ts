@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
 import {GoodsService} from './shared/goods.service';
 import {HeroGoodsStatsComponent} from "./hero-bagage-goods/hero-goods-stats/hero-goods-stats.component";
 import {HeroComponent} from "./hero/hero.component";
-import {HeroBagageGoodsComponent} from "./hero-bagage-goods/hero-bagage-goods.component";
-import {HeroBagageComponent} from "./hero-bagage/hero-bagage.component";
-import {ThingComponent} from "./thing.component/thing.component";
+
+import {ThingComponent} from "./hero-bagage-goods/thing.component/thing.component";
 import {HeroService} from "./hero/hero.service";
+import {HeroBagageComponent} from "./hero-bagage-goods/hero-bagage.component";
 
 
 @NgModule({
@@ -19,11 +19,10 @@ import {HeroService} from "./hero/hero.service";
         AppComponent,
         HeroGoodsStatsComponent,
         HeroComponent,
-        HeroBagageGoodsComponent,
-        HeroBagageComponent,
-        ThingComponent
+        ThingComponent,
+        HeroBagageComponent
     ],
-    providers: [HeroService, GoodsService],
+    providers: [HeroService, GoodsService, ThingComponent],
     bootstrap: [AppComponent]
 })
 
