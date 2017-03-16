@@ -1,0 +1,14 @@
+<h2>Phrases</h2>
+<ul class="phrases">
+	<li *ngFor="let book of bookss"
+	    (click)="onSelect(book)">
+		{{book.name}}
+	</li>
+</ul>
+<ul class="phrases">
+	<li *ngFor="let book of books"
+	    (click)="onSelect(book)">
+		{{book.name}}
+	</li>
+</ul>
+
