@@ -11,8 +11,8 @@ var app_component_1 = require("./app.component");
 var app_routes_1 = require("./app.routes");
 // components
 var home_component_1 = require("./home/home.component");
-var phrase_details_component_1 = require("./book-details/book-details.component.ts");
-var books_list_component_1 = require("./books-list/books-list.component");
+var phrase_details_component_1 = require("./books/book-details/book-details.component.ts");
+var books_list_component_1 = require("./books/books-list/books-list.component");
 // services
 var my_service_1 = require("./shared/books.service.ts");
 var http_1 = require("@angular/http");

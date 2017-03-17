@@ -1,0 +1,14 @@
+<h2>Books</h2>
+<!--<ul class="phrases">-->
+	<!--<li *ngFor="let book of books"-->
+	    <!--(click)="onSelect(book)">-->
+		<!--{{book?.isbn}}-->
+	<!--</li>-->
+<!--</ul>-->
+<div class="books">
+  <div class="books-item">
+    <div class="book" *ngFor="let book of books">
+      <span>{{book?.name}}</span>
+    </div>
+  </div>
+</div>
