@@ -1,4 +1,4 @@
-<h2>Books</h2>
+<!--<h2>Books</h2>-->
 <!--<ul class="phrases">-->
 	<!--<li *ngFor="let book of books"-->
 	    <!--(click)="onSelect(book)">-->
@@ -7,8 +7,9 @@
 <!--</ul>-->
 <div class="books">
   <div class="books-item">
-    <div class="book" *ngFor="let book of books">
-      <span>{{book?.name}}</span>
+    <div class="book" *ngFor="let book of books" (click)="onSelect(book)">
+        <img src="../assets/1.png" width="80px" height="80px">
+        <div>{{book?.name}}</div>
     </div>
   </div>
 </div>

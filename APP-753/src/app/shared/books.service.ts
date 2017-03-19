@@ -23,7 +23,7 @@ export interface Bookses{
   name: string;
   isbn: any;
   id: number;
-  img: any;
+  view: any;
 }
 
 
