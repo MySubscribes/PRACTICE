@@ -31,7 +31,7 @@ export class HouseListComponent implements OnInit {
       this.http.get('http://www.anapioficeandfire.com/api/books').subscribe(
         result => this.httpArray = result.json(),
         error => console.log(error.statusText))
-     }
+    }
 
     onSelect(selected: Houses) {
         this.router.navigate(["home"]);

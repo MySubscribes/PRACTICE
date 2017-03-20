@@ -12,7 +12,8 @@ export class BooksService{
         return this.http.get('http://www.anapioficeandfire.com/api/books')
                    .map(res => res.json());
     }
-    getBook(id){
+
+    getBookiD(id){
       return this.http.get(`http://www.anapioficeandfire.com/api/books/${id}`)
         .map(res => res.json());
     }
@@ -22,8 +23,9 @@ export interface Bookses{
   url: string;
   name: string;
   isbn: any;
-  id: number;
+  id: any;
   view: any;
+  povCharacters:any;
 }
 
 
