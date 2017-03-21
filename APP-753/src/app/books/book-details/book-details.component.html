@@ -18,8 +18,8 @@
     <h2>Selected Book:  "{{book?.name}}"</h2>
   </div>
   <div class="books-item">
-    <div class="book" *ngFor="let character of characters" (click)="onSelect(book)">
-      <img src="../../../assets/heroimg/3.jpg" width="80px" height="80px">
+    <div class="book" *ngFor="let character of characters">
+      <img src="{{character.view ? character.view.view : '../../../assets/heroimg/empty.jpg'}}" (click)="onSelect(character)" width="80px" height="80px">
       <!--<img src="{{book?.view.view}}" width="80px" height="80px">-->
       <div class="characterUrl">{{character.name}}</div>
       <!--<div>{{book?.name}}</div>-->
@@ -28,3 +28,4 @@
 
 </div>
 <button (click)="goToBooksList()">Go Back</button>
+  <!--(click)="onSelect(book)-->

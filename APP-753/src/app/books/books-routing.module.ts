@@ -3,6 +3,7 @@ import {NgModule} from "@angular/core";
 import {RouterModule} from "@angular/router";
 import {BookListComponent} from "./books-list/books-list.component";
 import {BookDetailsComponent} from "./book-details/book-details.component";
+import {HeroDetailsComponent} from './hero-details/hero-details.component';
 
 
 @NgModule({
@@ -14,6 +15,10 @@ import {BookDetailsComponent} from "./book-details/book-details.component";
     {
       path: "books/:id",
       component: BookDetailsComponent
+    },
+    {
+      path: "hero/:id",
+      component: HeroDetailsComponent
     }
     ]),
   ],

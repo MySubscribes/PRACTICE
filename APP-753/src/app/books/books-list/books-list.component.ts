@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router'
 import {Bookses, BooksService} from '../../shared/books.service';
-import {ImgService, Images} from '../../shared/Img.service';
+import {ImgService, Images} from '../../shared/img.service';
 
 
 @Component({
@@ -14,7 +14,7 @@ import {ImgService, Images} from '../../shared/Img.service';
 export class BookListComponent implements OnInit {
 
 	books: Bookses[];
-	imgs: any = [];
+	imgs: Images[];
 
 	constructor(private router: Router,
 							private imgService: ImgService,
@@ -32,7 +32,7 @@ export class BookListComponent implements OnInit {
 			}
 
 			this.imgs = this.imgService.getImg();
-			let img = '';
+			let img;
 			this.books.forEach(book => {
 				let id = book.id;
 				img = this.imgs.find(elem => {
@@ -43,12 +43,11 @@ export class BookListComponent implements OnInit {
 				book.view = img;
 			});
 		});
-	}
+  }
 
 
 	onSelect(selected: Bookses) {
 		this.router.navigate(['books', selected.id]);
-		
 	}
   
 }

@@ -26,6 +26,7 @@ export interface Bookses{
   id: any;
   view: any;
   povCharacters:any;
+  characters: any;
 }
 
 
