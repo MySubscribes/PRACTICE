@@ -1,18 +1,4 @@
 
-	<!--<div > Value: {{book?.name}}</div>-->
-
-<!--<div class="container">-->
-  <!--<div class="character" *ngFor="let character of characters">-->
-    <!--<div class="wer">-->
-      <!--<img src="../../../assets/heroimg/3.jpg" width="80px" height="80px">-->
-      <!--<div class="characterUrl">{{character}}</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-  <!--&lt;!&ndash;<div > Value: {{book?.povCharacters}}</div>&ndash;&gt;-->
-  <!--<button (click)="goToBooksList()">Go Back</button>-->
-<!--</div>-->
-
 <div class="books">
   <div class="title">
     <h2>Selected Book:  "{{book?.name}}"</h2>
@@ -20,9 +6,9 @@
   <div class="books-item">
     <div class="book" *ngFor="let character of characters">
       <img src="{{character.view ? character.view.view : '../../../assets/heroimg/empty.jpg'}}" (click)="onSelect(character)" width="80px" height="80px">
-      <!--<img src="{{book?.view.view}}" width="80px" height="80px">-->
+
       <div class="characterUrl">{{character.name}}</div>
-      <!--<div>{{book?.name}}</div>-->
+
     </div>
   </div>
 

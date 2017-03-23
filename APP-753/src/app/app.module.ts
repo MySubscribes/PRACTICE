@@ -13,7 +13,6 @@ import {HoussesService} from "./shared/houses.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {BooksModule} from "./books/books.module";
 import {HousesModule} from "./houses/houses.module";
-
 import {CharacterService} from './shared/characters.service';
 import {ImgService} from './shared/img.service';
 

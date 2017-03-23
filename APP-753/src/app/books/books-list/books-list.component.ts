@@ -24,7 +24,7 @@ export class BookListComponent implements OnInit {
 	ngOnInit() {
 		this.booksService.getBooks().subscribe(books => {
 			this.books = books;
-			for (let books of this.books) {
+      for (let books of this.books) {
 				let link = books.url;
 				let linkId = link.split('/');
 				let id = linkId[linkId.length - 1];

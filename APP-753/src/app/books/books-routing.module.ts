@@ -17,7 +17,7 @@ import {HeroDetailsComponent} from './hero-details/hero-details.component';
       component: BookDetailsComponent
     },
     {
-      path: "hero/:id",
+      path: "char/:id",
       component: HeroDetailsComponent
     }
     ]),

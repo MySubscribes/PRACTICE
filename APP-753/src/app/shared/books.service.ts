@@ -7,16 +7,23 @@ import 'rxjs/add/operator/map';
 export class BooksService{
     constructor(private http: Http){}
     books: any;
-
+    idi: any;
+    
+    
     getBooks(){
+        console.log(this.idi);
         return this.http.get('http://www.anapioficeandfire.com/api/books')
                    .map(res => res.json());
+      
     }
 
-    getBookiD(id){
+    getBookiD(id: any){
       return this.http.get(`http://www.anapioficeandfire.com/api/books/${id}`)
         .map(res => res.json());
     }
+    
+    
+   
 }
 
 export interface Bookses{
@@ -27,6 +34,7 @@ export interface Bookses{
   view: any;
   povCharacters:any;
   characters: any;
+  idi: any;
 }
 
 

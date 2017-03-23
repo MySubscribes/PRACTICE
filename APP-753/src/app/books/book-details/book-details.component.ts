@@ -31,16 +31,6 @@ export class BookDetailsComponent implements OnInit {
       this.activatedRoute.params.subscribe((params: any) => {
         this.booksService.getBookiD(params.id).subscribe(book => {
           this.book = book;
-  
-          // for (let char of this.char) {
-          //   let link = char.url;
-          //   let linkId = link.split('/');
-          //   let id = linkId[linkId.length - 1];
-          //   char.id = +id;
-          // }
-          //
-          
-          // console.log(this.book);
           if(this.book.povCharacters.length === 0){
             let maxCharNumbers = 10;
             for (let count=0; count < maxCharNumbers; count++) {
@@ -57,11 +47,12 @@ export class BookDetailsComponent implements OnInit {
                 if(charExist < maxCharNumbers){
                   let charAbsent = maxCharNumbers - charExist ;
                   for (let count=0; count < charAbsent; count++) {
-                    characters.push([{view: false}]);
+                    characters.push({});
                   }
                 }
               this.characters = characters;
               this.getHero();
+              this.getIdForChar();
           });
         });
       });
@@ -87,9 +78,25 @@ export class BookDetailsComponent implements OnInit {
   
   
   onSelect(char: any) {
-      console.log(char);
-      this.router.navigate(['hero', char]);
+    let link = this.book.url;
+    let linkId = link.split('/');
+    let id = linkId[linkId.length - 1];
+    this.book.id = +id;
+    this.booksService.idi = this.book.id;
+    this.router.navigate(['char', char.id]);
   }
+  
+  getIdForChar(){
+      for (let char of this.characters) {
+        if(char.view!==undefined) {
+        let link = char.url;
+        let linkId = link.split('/');
+        let id = linkId[linkId.length - 1];
+        char.id = +id;
+      }
+    }
+  }
+  
 }
 
 
