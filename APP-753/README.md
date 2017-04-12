@@ -1,4 +1,6 @@
 # Games
+http://gameofthronesapp.byethost4.com  (на данный момент рабочая вкладка books)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
 
