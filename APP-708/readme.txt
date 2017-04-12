@@ -1,11 +1,10 @@
-﻿у нас есть класс
-classroom
+Есть класс classroom
+
 у класса classroom есть методы
 addStudent
 removeStudent
 есть поле students(массив из студентов)
 есть поле parents (массив из родителей студентов)
-
 
 у  класса people есть поля
 name
