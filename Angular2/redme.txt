@@ -1,4 +1,1 @@
-в тудулисте будет 
-1) общий компонент
-2) todolist
-3) todo
+TODOList РЅР° Angular2
